@@ -8,7 +8,7 @@ body {
   position: relative;
   background: #FFF5E5 !important; 
   font-family: "Hanken Grotesk", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 header {
@@ -114,7 +114,7 @@ main .para-text {
 main .about {
   position: relative;
   text-align: center;
-  margin: 24rem auto;
+  margin: 26rem auto;
   z-index: 1; 
 }
 
@@ -145,19 +145,24 @@ main .about-ellipse {
 
 
 .freelance {
-  margin-top: 14rem;
+  margin-top: 10rem;
   margin-bottom: 10rem;
   background-color: #f9f9f9;
   padding: 4rem 3rem;
   border-radius: 3rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   font-family: "Hanken Grotesk", sans-serif !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .freelance p {
   text-align: justify;
   color: #222;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   line-height: 1.7;
   margin: 0;
 }
@@ -289,7 +294,7 @@ main .about-ellipse {
 
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 0 10px;
 }
@@ -314,7 +319,6 @@ main .about-ellipse {
 .footer {
   background-color: #fdfdfd;
   color: #000000;
-  padding: 2rem 0;
   font-size: 1rem;
   font-family: "Hanken Grotesk", sans-serif;
   margin-top: 5rem;
@@ -340,54 +344,132 @@ main .about-ellipse {
 
 
 
-/* Media Queries */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 18px;
+
+
+@media (max-width: 500px) {
+  body {
+    padding: 0;
   }
 
-  main h2 {
-    font-size: 48px;
+  main {
+    padding: 2rem 1rem;
   }
 
-  main p {
-    font-size: 24px;
+  main h2,
+  .section-title,
+  .client-work h2 {
+    font-size: 2.4rem;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
-  main .para-text {
+  main p,
+  .freelance p,
+  .footer p,
+  .main .para-text {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .para-text {
+    width: 100% !important;
+  }
+
+  main .about {
+    margin: 10rem auto;
+  }
+
+  main .about p {
+    font-size: 2.8rem;
+    padding: 0 1rem;
+    line-height: 1.2;
+  }
+
+  .freelance,
+  .software-section,
+  .client-work,
+  .footer {
+    padding: 2.5rem 1.2rem;
     width: 100%;
-    font-size: 18px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto 4rem;
+    border-radius: 2rem;
   }
 
   .freelance {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills-list,
+  .client-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
     align-items: center;
+    margin-top: 3rem;
+  }
+
+  .image-btn {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    border-radius: 1.5rem;
     text-align: center;
   }
 
-  .free p {
-    font-size: 20px;
-    margin: 1rem;
+  .footer {
+    text-align: center;
+    font-size: 1rem;
   }
 
-  main .about {
-    margin: 6rem 1rem;
-  }
-
-  .skills {
-    margin: 4rem auto;
-  }
-
-  .skills p {
+  .about-ellipse {
+    width: 220px;
+    height: 220px;
+    top: 70%;
     left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    filter: blur(60px);
+  }
+
+  .orange {
+    width: 250px;
+    height: 250px;
+    top: -100px;
+    left: -120px;
+  }
+
+  .pink {
+    width: 220px;
+    height: 180px;
+    top: 300px;
+    right: 20px;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  main .about-ellipse {
+    opacity: 0.8; 
+    width: 400px;  
+    height: 600px;
+  }
+
+  main .about p {
+    font-size: 3rem; 
   }
 }
