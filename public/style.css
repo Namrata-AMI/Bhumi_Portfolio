@@ -281,7 +281,7 @@ main .about-ellipse {
   text-align: center;
   border-radius: 4rem;
   box-shadow: 10px 14px 18px 10px rgba(2, 129, 233, 0.1);
-
+  margin-bottom: 10rem;
 }
 
 .client-work h2 {
@@ -323,6 +323,7 @@ main .about-ellipse {
   font-family: "Hanken Grotesk", sans-serif;
   margin-top: 5rem;
   border-top: 1px solid #333;
+  padding: 2rem;
 }
 
 .footer p {
