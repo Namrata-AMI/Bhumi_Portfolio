@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,21 +18,25 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+  <!-- Background Shapes -->
   <div class="ellipse-shape orange"></div>
   <div class="ellipse-shape pink">
-    <img src="/assets/Ellipse 1.png" class="blob" alt="Decorative blob" />
+    <img src="assets/Ellipse 1.png" class="blob" alt="Decorative blob" />
   </div>
 
-  <!-- Header with Bootstrap navbar -->
-  <header class="container-fluid px-4">
-    <div class="d-flex justify-content-between align-items-center">
+  <!-- Header / Navbar -->
+  <header class="container-fluid px-4 navbar navbar-light">
+    <div class="d-flex justify-content-between align-items-center w-100">
       <h1>Bhumi</h1>
+
       <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <nav class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarNav">
+
+      <nav class="collapse navbar-collapse d-md-flex justify-content-end gap-4" id="navbarNav">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#projects">PROJECTS</a>
@@ -40,128 +45,116 @@
     </div>
   </header>
 
-  <main id="home">
+  <!-- HERO SECTION -->
+  <main id="home" class="container text-center mt-5">
     <h2>HI, I AM BHUMI</h2>
     <p>I DESIGN VISUALS THAT SPEAK</p>
-    <p class="para-text">Specializing in social media, print, and UI design for modern brands</p>
+    <p class="para-text">
+      Specializing in social media, print, and UI design for modern brands
+    </p>
 
-    <div class="buttons">
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhumiteshwar@gmail.com&su=Work%20Inquiry&body=Hi%20BHUMI,%0A%0AI%20would%20love%20to%20work%20with%20you." target="_blank" class="image-btn btn"> Let’s Work Together →</a>
-
+    <div class="buttons mt-4">
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=bhumiteshwar@gmail.com&su=Work%20Inquiry&body=Hi%20Bhumi,%0A%0AI%20would%20love%20to%20work%20with%20you."
+        target="_blank"
+        class="image-btn btn"
+      >
+        Let’s Work Together →
+      </a>
     </div>
+  </main>
 
-
-    
-    <div class="about">
+  <!-- ABOUT -->
+  <section class="freelance container mt-5" id="about">
+    <div class="about text-center mb-4">
       <div class="about-ellipse"></div>
       <p>ABOUT ME</p>
     </div>
 
+    <p>
+      I’m a freelance graphic designer with a passion for clean, impactful visuals.
+      From scroll-stopping social media posts to refined editorial layouts and
+      user-focused interfaces, I help brands stand out with minimalist design.
+    </p>
+  </section>
 
+  <!-- SOFTWARE -->
+  <section class="software-section container mt-5">
+    <h2 class="section-title mb-4">Software</h2>
 
-<section class="freelance container" id="about">
-  <div class="row align-items-center">
-    <div class="col-12">
-      <p>
-        I’m a freelance graphic designer with a passion for clean, impactful visuals.  
-        From scroll-stopping social media posts to refined editorial layouts and user-focused interfaces,  
-        I help brands stand out with minimalist design.
-      </p>
+    <div class="software-grid">
+      <div class="software-item">
+        <i class="fa-brands fa-adobe"></i> Photoshop
+      </div>
+      <div class="software-item">
+        <i class="fa-brands fa-adobe"></i> Illustrator
+      </div>
+      <div class="software-item">
+        <i class="fa-brands fa-adobe"></i> Premiere Pro
+      </div>
+      <div class="software-item">
+        <i class="fa-brands fa-figma"></i> Figma
+      </div>
+      <div class="software-item">
+        <i class="fa-solid fa-pen-nib"></i> Procreate
+      </div>
     </div>
-  </div>
-</section>
- 
-  
+  </section>
 
+  <!-- SKILLS -->
+  <section class="clean-skills container mt-5">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li>Brand Identity Design</li>
+      <li>Visual Storytelling</li>
+      <li>Creative Direction</li>
+      <li>Editorial Design</li>
+      <li>Responsible</li>
+      <li>Detail-oriented</li>
+      <li>Proactive</li>
+      <li>Adaptable</li>
+    </ul>
+  </section>
 
-<section class="software-section container justify-content-between align-items-center mt-5">
-
-  <h2 class="section-title  m-4 justify-content-between align-items-center p-2">Software</h2>
-
-  <div class="software-grid">
-    <div class="software-item justify-content-between align-items-center">
-      <i class="fa-brands fa-adobe fa-lg"></i> Ps Photoshop
-      <div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div>
+  <!-- PROJECTS -->
+  <section class="client-work container mt-5" id="projects">
+    <h2>Client Work</h2>
+    <div class="client-grid">
+      <img src="assets/1img.png">
+      <img src="assets/2img.png">
+      <img src="assets/3img.png">
+      <img src="assets/4img.png">
+      <img src="assets/5img.png">
+      <img src="assets/6img.png">
+      <img src="assets/7img.png">
+      <img src="assets/8img.png">
+      <img src="assets/9img.png">
+      <img src="assets/10img.png">
+      <img src="assets/11img.png">
     </div>
-    <div class="software-item justify-content-between align-items-center">
-      <i class="fa-brands fa-adobe fa-lg"></i> Ai Illustrator
-      <div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span></div>
+  </section>
+
+  <!-- PERSONAL WORK -->
+  <section class="client-work container mt-5">
+    <h2>Personal Work</h2>
+    <div class="client-grid">
+      <img src="assets/Jungkook.png">
+      <img src="assets/Draw.png">
+      <img src="assets/12img.png">
+      <img src="assets/13img.png">
+      <img src="assets/14img.png">
     </div>
-    <div class="software-item justify-content-between align-items-center">
-      <i class="fa-brands fa-adobe fa-lg"></i> Pr Premiere
-      <div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span><span class="dot empty"></span></div>
-    </div>
-    <div class="software-item d-flex justify-content-between align-items-center">
-      <i class="fa-brands fa-figma fa-lg"></i>  Figma
-      <div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot empty"></span></div>
-    </div>
-    <div class="software-item d-flex justify-content-between align-items-center">
-      <i class="fa-solid fa-pen-nib"></i> Procreate
-      <div class="dots"><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span><span class="dot full"></span></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-
-<section class="clean-skills">
-  <h2 class="section-title">Skills</h2>
-  <ul class="skills-list">
-    <li>Brand Identity Design</li>
-    <li>Visual Storytelling</li>
-    <li>Creative Direction</li>
-    <li>Editorial Design</li>
-    <li>Responsible</li>
-    <li>Detail-oriented</li>
-    <li>Proactive</li>
-    <li>Adaptable</li>
-  </ul>
-</section>
-
-
-
-<section class="client-work" id="projects">
-  <h2>Client Work</h2>
-  <div class="client-grid">
-    <img src="/assets/1img.png" alt="Client 1">
-    <img src="/assets/2img.png" alt="Client 2">
-    <img src="/assets/3img.png" alt="Client 3">
-    <img src="/assets/4img.png" alt="Client 4">
-    <img src="/assets/5img.png" alt="Client 5">
-    <img src="/assets/6img.png" alt="Client 6">
-    <img src="/assets/7img.png" alt="Client 7">
-    <img src="/assets/8img.png" alt="Client 8">
-    <img src="/assets/9img.png" alt="Client 9">
-    <img src="/assets/10img.png" alt="Client 10">
-    <img src="/assets/11img.png" alt="Client 11">
-  </div>
-</section>
-
-
-
-<section class="client-work">
-  <h2>Personal Work</h2>
-  <div class="client-grid">
-    <img src="/assets/Jungkook.png" alt="Client 1">
-    <img src="/assets/Draw.png" alt="Client 2">
-    <img src="/assets/12img.png" alt="Client 3">
-    <img src="/assets/13img.png" alt="Client 4">
-    <img src="/assets/14img.png" alt="Client 5">
-  </div>
-</section>
-
-
-</main>
-
-
-<footer class="footer" id="contact">
-  <div class="container text-center">
-    <p>&copy; 2025 Bhumi . All rights reserved.</p>
-    <p>Email: <a href="mailto:bhumiteshwar@gmail.com">bhumiteshwar@gmail.com</a> | Phone: +91-8126845932</p>
-  </div>
-</footer>
-
-
+  <!-- FOOTER -->
+  <footer class="footer text-center mt-5" id="contact">
+    <p>&copy; 2025 Bhumi. All rights reserved.</p>
+    <p>
+      Email:
+      <a href="mailto:bhumiteshwar@gmail.com">bhumiteshwar@gmail.com</a>
+      | Phone: +91-8126845932
+    </p>
+  </footer>
 
 </body>
 </html>
