@@ -11,6 +11,12 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+
+app.get("/work/logo-design", (req, res) => {
+  res.render("logo_design.ejs");
+});
+
+
 const PORT = process.env.PORT || 8080;
 
 if (require.main === module) {

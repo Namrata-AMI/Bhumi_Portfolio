@@ -1,170 +1,436 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhumi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Bhumi® — Graphic Designer & Visual Artist</title>
+  <meta
+    name="description"
+    content="The portfolio of Bhumi — graphic design, visual identity and creative direction."
+  >
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Kaushan+Script&family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Animation libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Your existing animation file -->
+  <script src="/js/animation.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Background Shapes -->
-  <div class="ellipse-shape orange"></div>
-  <div class="ellipse-shape pink">
-    <img src="assets/Ellipse 1.png" class="blob" alt="Decorative blob" />
-  </div>
+  <!-- =====================================
+       NAVIGATION
+  ====================================== -->
 
-  <!-- Header / Navbar -->
-  <header class="container-fluid px-4 navbar navbar-light">
-    <div class="d-flex justify-content-between align-items-center w-100">
-      <h1>Bhumi</h1>
+  <header class="site-header">
 
-      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <a href="#projects" class="logo" aria-label="Bhumi home">
+      bhumi<span>®</span>
+    </a>
 
-      <nav class="collapse navbar-collapse d-md-flex justify-content-end gap-4" id="navbarNav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </div>
+    <p class="header-caption">INDEPENDENT DESIGNER</p>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#software">Toolkit</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
   </header>
 
-  <!-- HERO SECTION -->
-  <main id="home" class="container text-center mt-5">
-    <h2>HI, I AM BHUMI</h2>
-    <p>I DESIGN VISUALS THAT SPEAK</p>
-    <p class="para-text">
-      Specializing in social media, print, and UI design for modern brands
-    </p>
 
-    <div class="buttons mt-4">
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=bhumiteshwar@gmail.com&su=Work%20Inquiry&body=Hi%20Bhumi,%0A%0AI%20would%20love%20to%20work%20with%20you."
-        target="_blank"
-        class="image-btn btn"
-      >
-        Let’s Work Together →
-      </a>
-    </div>
+  <main class="portfolio-main">
+
+    <!-- =====================================
+         01 — WORKS HERO
+         Blurred moving project images
+    ====================================== -->
+   
+    <section class="work-section" id="projects">
+
+      <!-- HERO: moving blurred background + title -->
+      <div class="works-hero">
+
+        <div class="works-ambient" aria-hidden="true">
+          <div class="works-ambient-track">
+            <img src="/assets/logo.png" alt="">
+            <img src="/assets/detail.png" alt="">
+            <img src="/assets/brand_info.png" alt="">
+            <img src="/assets/campaign.png" alt="">
+
+            <!-- Duplicate images for continuous movement -->
+            <img src="/assets/logo.png" alt="">
+            <img src="/assets/detail.png" alt="">
+            <img src="/assets/brand_info.png" alt="">
+            <img src="/assets/campaign.png" alt="">
+          </div>
+        </div>
+
+        <div class="works-ambient-overlay"></div>
+
+        <div class="works-hero-content">
+          <p class="works-eyebrow">SELECTED PROJECTS · 2024—2026</p>
+
+          <h1 class="works-title">Works<span>.</span></h1>
+
+          <p class="works-description">
+            A DELIBERATE SELECTION OF BRAND<br>
+            EXPERIENCES WE ARE PROUD TO STAND<br>
+            BEHIND.
+          </p>
+        </div>
+
+        <div class="works-scroll-hint">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="works-scroll-line"></span>
+        </div>
+
+      </div>
+
+
+      <!-- PROJECTS: four horizontal cards -->
+      <div class="works-gallery">
+
+        <div class="works-projects">
+
+          <!-- Project 01 -->
+          <a href="/work/logo-design"
+            class="works-project-card"
+            aria-label="View Logo Design project">
+
+            <img src="/assets/logo.png" alt="Logo design project">
+
+            <div class="project-overlay">
+              <span class="project-category">01 / BRAND IDENTITY</span>
+              <h2>Logo Design</h2>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+
+          <!-- Project 02 -->
+          <a href="/work/visual-design"
+            class="works-project-card"
+            aria-label="View Visual Design project">
+
+            <img src="/assets/detail.png" alt="Visual design project">
+
+            <div class="project-overlay">
+              <span class="project-category">02 / ART DIRECTION</span>
+              <h2>Visual Design</h2>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+
+          <!-- Project 03 -->
+          <a href="/work/brand-identity"
+            class="works-project-card"
+            aria-label="View Brand Identity project">
+
+            <img src="/assets/brand_info.png" alt="Brand identity project">
+
+            <div class="project-overlay">
+              <span class="project-category">03 / BRAND SYSTEM</span>
+              <h2>Brand Identity</h2>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+
+          <!-- Project 04 -->
+          <a href="/work/campaign-design"
+            class="works-project-card"
+            aria-label="View Campaign Design project">
+
+            <img src="/assets/campaign.png" alt="Campaign design project">
+
+            <div class="project-overlay">
+              <span class="project-category">04 / CAMPAIGN</span>
+              <h2>Campaign Design</h2>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         02 — INTRODUCTION
+    ====================================== -->
+
+    <section class="hero content-section" id="home">
+
+      <div class="section-meta">
+        <span>02 — INTRODUCTION</span>
+        <span>DESIGNER / CREATIVE THINKER</span>
+      </div>
+
+      <p class="eyebrow">HELLO, I'M</p>
+
+      <h2 class="hero-title">
+        <span class="intro-letter">B</span><span class="intro-letter">H</span><span class="intro-letter">U</span><span class="intro-letter">M</span><span class="intro-letter">I</span><span class="intro-letter">.</span>
+      </h2>
+
+      <div class="hero-bottom">
+
+        <p class="hero-tagline">
+          Making ideas visible through thoughtful design.
+        </p>
+
+        <p class="hero-description">
+          I create visual identities, graphic compositions and
+          digital experiences that bring ideas to life.
+        </p>
+
+        <a href="#contact" class="text-link">
+          Let's work together <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         03 — ABOUT
+    ====================================== -->
+
+    <section class="about-section content-section" id="about">
+
+      <div class="section-meta">
+        <span>03 — ABOUT</span>
+        <span>A LITTLE CONTEXT</span>
+      </div>
+
+      <div class="about-layout">
+
+        <p class="eyebrow">BEHIND THE WORK</p>
+
+        <div class="about-content">
+
+          <h2>
+            Design is more than how something looks.
+            It's how an idea <span>makes you feel.</span>
+          </h2>
+
+          <p>
+            I'm Bhumi, a designer interested in visual storytelling,
+            branding and creative exploration. I enjoy transforming
+            ideas into thoughtful visual experiences through
+            typography, colour, composition and detail.
+          </p>
+
+          <a href="#software" class="text-link">
+            Explore my toolkit <span>↓</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         04 — SOFTWARE / TOOLKIT
+    ====================================== -->
+
+    <section class="software-section content-section" id="software">
+
+      <div class="section-meta">
+        <span>04 — TOOLKIT</span>
+        <span>TOOLS OF THE TRADE</span>
+      </div>
+
+      <div class="section-heading">
+
+        <p class="eyebrow">MY CREATIVE TOOLKIT</p>
+
+        <h2>
+          Made with<br>
+          curiosity<span>.</span>
+        </h2>
+
+      </div>
+
+      <div class="software-grid">
+
+        <article class="software-item">
+          <span class="software-number">01</span>
+          <h3>Adobe Photoshop</h3>
+          <p>Image-making and visual composition</p>
+        </article>
+
+        <article class="software-item">
+          <span class="software-number">02</span>
+          <h3>Adobe Illustrator</h3>
+          <p>Identity and vector design</p>
+        </article>
+
+        <article class="software-item">
+          <span class="software-number">03</span>
+          <h3>Figma</h3>
+          <p>Interface and digital design</p>
+        </article>
+
+        <article class="software-item">
+          <span class="software-number">04</span>
+          <h3>Procreate</h3>
+          <p>Bringing ideas to the browser</p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         05 — SKILLS
+    ====================================== -->
+
+    <section class="skills-section content-section" id="skills">
+
+      <div class="section-meta">
+        <span>05 — CAPABILITIES</span>
+        <span>WHAT I BRING TO THE TABLE</span>
+      </div>
+
+      <div class="skills-content">
+
+        <p class="eyebrow">AREAS OF INTEREST</p>
+
+        <h2>
+          Thoughtful ideas.<br>
+          Distinctive visuals<span>.</span>
+        </h2>
+
+        <div class="skills-list">
+          <span>Visual Identity</span>
+          <span>Graphic Design</span>
+          <span>Art Direction</span>
+          <span>Creative Campaigns</span>
+          <span>Digital Experiences</span>
+          <span>Visual Storytelling</span>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <!-- ABOUT -->
-  <section class="freelance container mt-5" id="about">
-    <div class="about text-center mb-4">
-      <!--<div class="about-ellipse"></div>-->
-      <p>ABOUT ME</p>
+
+  <!-- =====================================
+       CONTACT FOOTER
+  ====================================== -->
+
+  <footer class="site-footer" id="contact">
+
+    <div class="section-meta">
+      <span>06 — CONTACT</span>
+      <span>LET'S CREATE SOMETHING</span>
     </div>
 
-    <p>
-      I’m a freelance graphic designer with a passion for clean, impactful visuals.
-      From scroll-stopping social media posts to refined editorial layouts and
-      user-focused interfaces, I help brands stand out with minimalist design.
-    </p>
-  </section>
+    <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
 
-  <!-- SOFTWARE -->
-  <section class="software-section container mt-5">
-    <h2 class="section-title mb-4">Software</h2>
+    <h2 class="footer-title">
+      Let's talk<span>.</span>
+    </h2>
 
-    <div class="software-grid">
-      <div class="software-item">
-        <i class="fa-brands fa-adobe"></i> Photoshop
-      </div>
-      <div class="software-item">
-        <i class="fa-brands fa-adobe"></i> Illustrator
-      </div>
-      <div class="software-item">
-        <i class="fa-brands fa-adobe"></i> Premiere Pro
-      </div>
-      <div class="software-item">
-        <i class="fa-brands fa-figma"></i> Figma
-      </div>
-      <div class="software-item">
-        <i class="fa-solid fa-pen-nib"></i> Procreate
-      </div>
+    <a
+      href="mailto:hello@example.com"
+      class="footer-email"
+    >
+      bhumiteshwer@gmail.com ↗
+    </a>
+
+    <div class="footer-bottom">
+      <span>BHUMI® — INDEPENDENT DESIGNER</span>
+      <span>DESIGNED WITH INTENTION © 2026</span>
+      <a href="#projects">BACK TO TOP ↑</a>
     </div>
-  </section>
 
-
-  <!-- SKILLS -->
-  <section class="clean-skills container mt-5">
-    <h2 class="section-title">Skills</h2>
-    <ul class="skills-list">
-      <li>Brand Identity Design</li>
-      <li>Visual Storytelling</li>
-      <li>Creative Direction</li>
-      <li>Editorial Design</li>
-      <li>Responsible</li>
-      <li>Detail-oriented</li>
-      <li>Proactive</li>
-      <li>Adaptable</li>
-    </ul>
-  </section>
-
-
-    <!-- proffesional WORK -->
-  <section class="client-work container mt-5">
-    <h2>Branding Work</h2>
-    <div class="client-grid">
-      <img src="assets/framework.png">
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="client-work container mt-5" id="projects">
-    <h2>Client Work</h2>
-    <div class="client-grid">
-      <img src="assets/1img.png">
-      <img src="assets/2img.png">
-      <img src="assets/3img.png">
-      <img src="assets/4img.png">
-      <img src="assets/5img.png">
-      <img src="assets/6img.png">
-      <img src="assets/7img.png">
-      <img src="assets/8img.png">
-      <img src="assets/9img.png">
-      <img src="assets/10img.png">
-      <img src="assets/11img.png">
-    </div>
-  </section>
-
-  <!-- PERSONAL WORK -->
-  <section class="client-work container mt-5">
-    <h2>Personal Work</h2>
-    <div class="client-grid">
-      <img src="assets/Jungkook.png">
-      <img src="assets/Draw.png">
-      <img src="assets/12img.png">
-      <img src="assets/13img.png">
-      <img src="assets/14img.png">
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer text-center mt-5" id="contact">
-    <p>&copy; 2025 Bhumi. All rights reserved.</p>
-    <p>
-      Email:
-      <a href="mailto:bhumiteshwar@gmail.com">bhumiteshwar@gmail.com</a>
-      | Phone: +91-8126845932
-    </p>
   </footer>
+
+
+  <!-- =====================================
+       3D IMAGE VIEWER
+       Retains existing viewer selectors
+  ====================================== -->
+
+  <div
+    class="card-3d-viewer"
+    id="card3DViewer"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project image viewer"
+  >
+
+    <button
+      class="viewer-3d-close"
+      type="button"
+      aria-label="Close image viewer"
+    >
+      ×
+    </button>
+
+    <button
+      class="viewer-3d-prev"
+      type="button"
+      aria-label="Previous project"
+    >
+      ←
+    </button>
+
+    <div class="viewer-3d-content">
+      <img
+        class="viewer-3d-image"
+        src=""
+        alt=""
+      >
+
+      <p class="viewer-3d-caption"></p>
+    </div>
+
+    <button
+      class="viewer-3d-next"
+      type="button"
+      aria-label="Next project"
+    >
+      →
+    </button>
+
+  </div>
 
 </body>
 </html>
+
+
+
